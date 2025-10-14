@@ -2,15 +2,12 @@ using UnityEngine;
 
 public class EnableDash : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    // 플레이어와 충돌 시 PlayerMovement 싱글톤의 dashAvailable을 true로 설정
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collision.CompareTag("Player"))
+        {
+            PlayerMovement.instance.dashAvailable = true;
+        }
     }
 }

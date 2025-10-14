@@ -9,6 +9,7 @@ public class ActionManager : Singleton<ActionManager>
     public UnityEvent<bool> jump;
     public UnityEvent<bool> attack;
     public UnityEvent<bool> jumpHold;
+    public UnityEvent<bool> dash;
     public UnityEvent<int> move;
 
     public void OnJumpHoldAction(InputAction.CallbackContext context)
@@ -33,6 +34,13 @@ public class ActionManager : Singleton<ActionManager>
     {
         if (context.started) { attack.Invoke(true); }
         else if (context.canceled) { attack.Invoke(false); }
+
+    }
+
+    public void OnDash(InputAction.CallbackContext context)
+    {
+        if (context.started) { dash.Invoke(true); }
+        else if (context.canceled) { dash.Invoke(false); }
 
     }
 
