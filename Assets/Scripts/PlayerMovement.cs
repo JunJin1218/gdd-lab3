@@ -18,7 +18,9 @@ public class PlayerMovement : Singleton<PlayerMovement>
     public LayerMask groundLayer;
     public float groundCheckDistance = 0.1f;
     public float dashForce = 4f;
-    [NonSerialized] public bool dashAvailable = false;
+
+    [NonSerialized]
+    public bool dashAvailable = false;
 
     // PRIVATE
     private Rigidbody2D rb;
@@ -36,6 +38,9 @@ public class PlayerMovement : Singleton<PlayerMovement>
     private bool fallingAttackAvailable = false;
     private bool dashPressed = false;
 
+    // SFX
+
+    private AudioSource ad;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -45,6 +50,7 @@ public class PlayerMovement : Singleton<PlayerMovement>
         cd = gameObject.GetComponent<Collider2D>();
         sr = gameObject.GetComponent<SpriteRenderer>();
         animator = gameObject.GetComponent<Animator>();
+        ad = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -57,20 +63,27 @@ public class PlayerMovement : Singleton<PlayerMovement>
         sr.flipX = rb.linearVelocityX < 0;
 
         // ResetPosition
-        if (transform.position.y < -6) ResetPosition();
+        if (transform.position.y < -6)
+            ResetPosition();
     }
 
     void FixedUpdate()
     {
-
         // Movement (x axis)
-        if (moving) Move(dir);
+        if (moving)
+            Move(dir);
 
         // Ground check & jump
-        isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
+        isGrounded = Physics2D.Raycast(
+            transform.position,
+            Vector2.down,
+            groundCheckDistance,
+            groundLayer
+        );
         if (jumpPressed && isGrounded)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            ad.Play();
             jumpPressed = false;
             extraJumpAvailable = true;
             fallingAttackAvailable = true;
@@ -102,8 +115,13 @@ public class PlayerMovement : Singleton<PlayerMovement>
 
     void OnJump(InputAction.CallbackContext context)
     {
-        if (context.started) jumpPressed = true;
-        if (context.canceled) jumpPressed = false;
+        if (context.started)
+        {
+            jumpPressed = true;
+        }
+
+        if (context.canceled)
+            jumpPressed = false;
     }
 
     void ResetPosition()
@@ -135,6 +153,7 @@ public class PlayerMovement : Singleton<PlayerMovement>
         moving = dir != 0;
         // Debug.Log($"{moving}, ${dir}");
     }
+
     public void Jump(bool b)
     {
         jumpPressed = b;
@@ -147,13 +166,7 @@ public class PlayerMovement : Singleton<PlayerMovement>
 
     public void JumpHold(bool b)
     {
-        if (b && extraJumpAvailable) extraJump = true;
+        if (b && extraJumpAvailable)
+            extraJump = true;
     }
-
-    public void Dash(bool b)
-    {
-        dashPressed = b;
-    }
-
-
 }

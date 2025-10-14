@@ -1,0 +1,1001 @@
+fileFormatVersion: 2
+guid: 7cb767be34c2de44b9eb37ce5e2fdb05
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7096220678680514065
+    second: RetroCats_0
+  - first:
+      213: 2024250173105819140
+    second: RetroCats_1
+  - first:
+      213: -135411448888778756
+    second: RetroCats_2
+  - first:
+      213: 5153977616318465078
+    second: RetroCats_3
+  - first:
+      213: -2647787127482326912
+    second: RetroCats_4
+  - first:
+      213: -2339523402945566803
+    second: RetroCats_5
+  - first:
+      213: 1126825047384083952
+    second: RetroCats_6
+  - first:
+      213: 8267016604122328932
+    second: RetroCats_7
+  - first:
+      213: -8679979563081594610
+    second: RetroCats_8
+  - first:
+      213: 6501903115567268136
+    second: RetroCats_9
+  - first:
+      213: -4536469241899799887
+    second: RetroCats_10
+  - first:
+      213: 7831244032110185503
+    second: RetroCats_11
+  - first:
+      213: 3953573409952808254
+    second: RetroCats_12
+  - first:
+      213: -145954835399653185
+    second: RetroCats_13
+  - first:
+      213: 8334348084446469352
+    second: RetroCats_14
+  - first:
+      213: -1790922181331016867
+    second: RetroCats_15
+  - first:
+      213: 6092499454922403763
+    second: RetroCats_16
+  - first:
+      213: -7013797134561804119
+    second: RetroCats_17
+  - first:
+      213: 8123234914727907131
+    second: RetroCats_18
+  - first:
+      213: 3361584585741034292
+    second: RetroCats_19
+  - first:
+      213: -2927576399320027397
+    second: RetroCats_20
+  - first:
+      213: -773014016583025067
+    second: RetroCats_21
+  - first:
+      213: 6862020584750996243
+    second: RetroCats_22
+  - first:
+      213: 1013335272577150565
+    second: RetroCats_23
+  - first:
+      213: 3360121822859706358
+    second: RetroCats_24
+  - first:
+      213: 4305741434430217301
+    second: RetroCats_25
+  - first:
+      213: 3971438253154901177
+    second: RetroCats_26
+  - first:
+      213: 3150036179155676461
+    second: RetroCats_27
+  - first:
+      213: 2202840762804079865
+    second: RetroCats_28
+  - first:
+      213: 8831558528587098922
+    second: RetroCats_29
+  - first:
+      213: -7531743395228919727
+    second: RetroCats_30
+  - first:
+      213: 8464273789146125941
+    second: RetroCats_31
+  - first:
+      213: 7711136860755564863
+    second: RetroCats_32
+  - first:
+      213: -8295622860643286460
+    second: RetroCats_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RetroCats_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 371
+        width: 43
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11e88802c17da7260800000000000000
+      internalID: 7096220678680514065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 371
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40ece78bec4971c10800000000000000
+      internalID: 2024250173105819140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_2
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 371
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cff9672310cee1ef0800000000000000
+      internalID: -135411448888778756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_3
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 371
+        width: 43
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6340af8c55b968740800000000000000
+      internalID: 5153977616318465078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 306
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0806099d2ab214bd0800000000000000
+      internalID: -2647787127482326912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_5
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 306
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da767bf3cd7588fd0800000000000000
+      internalID: -2339523402945566803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 242
+        width: 62
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fd4751196943af00800000000000000
+      internalID: 1126825047384083952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_7
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 281
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46fa7f80dc75ab270800000000000000
+      internalID: 8267016604122328932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_8
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 281
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e090fdc63948a8780800000000000000
+      internalID: -8679979563081594610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_9
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 281
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 821846f5f666b3a50800000000000000
+      internalID: 6501903115567268136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_10
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 242
+        width: 62
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1baa31e72493b01c0800000000000000
+      internalID: -4536469241899799887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_11
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 242
+        width: 62
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c435b94fa2eac60800000000000000
+      internalID: 7831244032110185503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_12
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 242
+        width: 62
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3dbaa5c11aedd630800000000000000
+      internalID: 3953573409952808254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_13
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 190
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb8c0cab9d679fdf0800000000000000
+      internalID: -145954835399653185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_14
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 190
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec93efec6d89a370800000000000000
+      internalID: 8334348084446469352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_15
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 189
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d53a569c3cd5527e0800000000000000
+      internalID: -1790922181331016867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_16
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 189
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bf29ec89f7ec8450800000000000000
+      internalID: 6092499454922403763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_17
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 3
+        width: 87
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a08ac3baacf9ae90800000000000000
+      internalID: -7013797134561804119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_18
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 131
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3f486fbd178bb070800000000000000
+      internalID: 8123234914727907131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_19
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 130
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 433e58bce5fb6ae20800000000000000
+      internalID: 3361584585741034292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_20
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 131
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe66b996c82f57d0800000000000000
+      internalID: -2927576399320027397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_21
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 105
+        width: 35
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55ebb27f8d3b545f0800000000000000
+      internalID: -773014016583025067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_22
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 73
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31b50838d5bca3f50800000000000000
+      internalID: 6862020584750996243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_23
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 73
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56ea550cf07101e00800000000000000
+      internalID: 1013335272577150565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_24
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 73
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ff3795cefc81ae20800000000000000
+      internalID: 3360121822859706358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_25
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 73
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55cd4e5950111cb30800000000000000
+      internalID: 4305741434430217301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_26
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 40
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bc12b6bc026d1730800000000000000
+      internalID: 3971438253154901177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_27
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 40
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2de330273d27bb20800000000000000
+      internalID: 3150036179155676461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_28
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 40
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fc00bba000129e10800000000000000
+      internalID: 2202840762804079865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_29
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 40
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2b618da0bfff8a70800000000000000
+      internalID: 8831558528587098922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_30
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 9
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1585cf3794fd97790800000000000000
+      internalID: -7531743395228919727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_31
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 9
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57654b36a24277570800000000000000
+      internalID: 8464273789146125941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_32
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 7
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3991c79e16730b60800000000000000
+      internalID: 7711136860755564863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroCats_33
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 7
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4424fb8d5f600ec80800000000000000
+      internalID: -8295622860643286460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RetroCats_0: 7096220678680514065
+      RetroCats_1: 2024250173105819140
+      RetroCats_10: -4536469241899799887
+      RetroCats_11: 7831244032110185503
+      RetroCats_12: 3953573409952808254
+      RetroCats_13: -145954835399653185
+      RetroCats_14: 8334348084446469352
+      RetroCats_15: -1790922181331016867
+      RetroCats_16: 6092499454922403763
+      RetroCats_17: -7013797134561804119
+      RetroCats_18: 8123234914727907131
+      RetroCats_19: 3361584585741034292
+      RetroCats_2: -135411448888778756
+      RetroCats_20: -2927576399320027397
+      RetroCats_21: -773014016583025067
+      RetroCats_22: 6862020584750996243
+      RetroCats_23: 1013335272577150565
+      RetroCats_24: 3360121822859706358
+      RetroCats_25: 4305741434430217301
+      RetroCats_26: 3971438253154901177
+      RetroCats_27: 3150036179155676461
+      RetroCats_28: 2202840762804079865
+      RetroCats_29: 8831558528587098922
+      RetroCats_3: 5153977616318465078
+      RetroCats_30: -7531743395228919727
+      RetroCats_31: 8464273789146125941
+      RetroCats_32: 7711136860755564863
+      RetroCats_33: -8295622860643286460
+      RetroCats_4: -2647787127482326912
+      RetroCats_5: -2339523402945566803
+      RetroCats_6: 1126825047384083952
+      RetroCats_7: 8267016604122328932
+      RetroCats_8: -8679979563081594610
+      RetroCats_9: 6501903115567268136
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
