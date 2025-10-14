@@ -10,6 +10,8 @@ public class GameManager : Singleton<GameManager>
     public TMPro.TMP_Text scoreText;
     private bool loadingCancelled = false;
 
+    public GameObject PausePanel;
+
     void Start()
     {
         StartCoroutine(GameLoop());
@@ -59,11 +61,27 @@ public class GameManager : Singleton<GameManager>
         yield return new WaitUntil(() => IsPlaying);
     }
 
+    // IEnumerator Fade()
+    // {
+    //     for (float alpha = 1f; alpha >= -0.05f; alpha -= 0.05f)
+    //     {
+    //         c.alpha = alpha;
+    //         yield return new WaitForSecondsRealtime(0.1f);
+    //     }
+
+    //     // once done, go to next scene
+    //     SceneManager.LoadSceneAsync("World-1-1", LoadSceneMode.Single);
+    // }
+
     public void StartGame()
     {
         SceneManager.LoadScene("LoadingScene");
         ResetScore();
         IsPlaying = true;
+        foreach (var audio in FindObjectsOfType<AudioSource>())
+        {
+            audio.Play(); // or audio.UnPause();
+        }
     }
 
     public void ResetScore()
@@ -154,6 +172,21 @@ public class GameManager : Singleton<GameManager>
             btn.onClick.RemoveAllListeners();
             btn.onClick.AddListener(StartGame);
         }
+        var pauseButtonGO = GameObject.Find("PauseButton");
+        if (pauseButtonGO != null)
+        {
+            var btn = pauseButtonGO.GetComponent<UnityEngine.UI.Button>();
+            btn.onClick.RemoveAllListeners();
+            btn.onClick.AddListener(PauseGame);
+        }
+
+        var resumeButtonGO = GameObject.Find("ResumeButton");
+        if (resumeButtonGO != null)
+        {
+            var btn = resumeButtonGO.GetComponent<UnityEngine.UI.Button>();
+            btn.onClick.RemoveAllListeners();
+            btn.onClick.AddListener(ResumeGame);
+        }
     }
 
     // main menu button
@@ -167,6 +200,12 @@ public class GameManager : Singleton<GameManager>
         }
         loadingCancelled = true;
 
+        // Stop all audio
+        foreach (var audio in FindObjectsOfType<AudioSource>())
+        {
+            audio.Stop();
+        }
+
         SceneManager.LoadScene("MainMenu");
     }
 
@@ -179,7 +218,7 @@ public class GameManager : Singleton<GameManager>
     IEnumerator LoadNextSceneAsync(string nextScene)
     {
         loadingCancelled = false;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2f); // wait for 2 seconds
 
         // Check if loading was cancelled
         if (loadingCancelled)
@@ -199,4 +238,27 @@ public class GameManager : Singleton<GameManager>
 
     // this was done because there was a bug where when i click the main menu in the
     // loading screen, the game would still load the scene1 after 2f seconds
+
+    // Pause and Resume buttons
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+        IsPlaying = false;
+        PausePanel.SetActive(true);
+        foreach (var audio in FindObjectsOfType<AudioSource>())
+        {
+            audio.Stop(); // or audio.Pause();
+        }
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
+        IsPlaying = true;
+        PausePanel.SetActive(false);
+        foreach (var audio in FindObjectsOfType<AudioSource>())
+        {
+            audio.Play(); // or audio.UnPause();
+        }
+    }
 }
