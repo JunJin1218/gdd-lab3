@@ -2365,6 +2365,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758778160}
   m_CullTransparentMesh: 1
+--- !u!4 &890066961 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9200961289339820800, guid: dd455912a5c620c4e801e7d32b126dbf, type: 3}
+  m_PrefabInstance: {fileID: 118767559}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1094720208
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,6 +2399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8fbc3c6fd3f284ba06a286964e731a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 758778162}
 --- !u!4 &1094720210
 Transform:
   m_ObjectHideFlags: 0
@@ -2625,6 +2631,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 622301078}
+  - {fileID: 890066961}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1560512866
@@ -2709,7 +2716,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1560512869}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1094720209}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnRestartButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1560512869
 MonoBehaviour:
   m_ObjectHideFlags: 0

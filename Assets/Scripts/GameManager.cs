@@ -15,34 +15,11 @@ public class GameManager : Singleton<GameManager>
         UpdateScoreUI();
     }
 
-    public void OnRestartButtonPressed()
-    {
-        // unliek score and enemies, we need this resetPlayerPosition because player is 
-        // not destroyed on scene reload
-        resetPlayerPosition();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    public void resetPlayerPosition()
-    {
-        var player = GameObject.FindWithTag("Player");
-        if (player != null)
-        {
-            player.transform.position = Vector3.zero;
-            var rb = player.GetComponent<Rigidbody2D>();
-            if (rb != null)
-            {
-                rb.linearVelocity = Vector2.zero;
-            }
-        }
-    }
-
     public void AddOnePoint()
     {
         score++;
         UpdateScoreUI();
     }
-
 
     public void UpdateScoreUI()
     {
@@ -87,14 +64,45 @@ public class GameManager : Singleton<GameManager>
         IsPlaying = true;
     }
 
+    public void ResetScore()
+    {
+        score = 0;
+        UpdateScoreUI();
+    }
+
     public void ForceStopGame()
     {
         IsPlaying = false;
     }
 
-    // --- For Unity's scene manager --- //
-    // Because this is a singleton, it will persist across scenes.
-    // We need to reset the game state when a new scene is loaded.
+    // --- Restart Logic --- //
+    // Called by the Restart button in the UI
+    public void OnRestartButtonPressed()
+    {
+        // unliek score and enemies, we need this resetPlayerPosition because player is
+        // not destroyed on scene reload
+        ResetScore();
+        resetPlayerPosition();
+        // load the current active scene again --> "RESTARTED"!
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void resetPlayerPosition()
+    {
+        var player = GameObject.FindWithTag("Player");
+        if (player != null)
+        {
+            player.transform.position = Vector3.zero;
+            var rb = player.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector2.zero;
+            }
+        }
+    }
+
+    // To "subscribe to sceneLoaded" means you are telling Unity:
+    // "Hey, when a new scene loads, please call this function of mine"
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -105,6 +113,7 @@ public class GameManager : Singleton<GameManager>
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
+    // run this once a new scene is loaded
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // we need this ebcause idk why the game manager is not finding the
@@ -114,6 +123,13 @@ public class GameManager : Singleton<GameManager>
         {
             scoreText = go.GetComponent<TMPro.TMP_Text>();
             UpdateScoreUI();
+        }
+        var buttonGO = GameObject.Find("RestartButton");
+        if (buttonGO != null)
+        {
+            var btn = buttonGO.GetComponent<UnityEngine.UI.Button>();
+            btn.onClick.RemoveAllListeners();
+            btn.onClick.AddListener(OnRestartButtonPressed);
         }
     }
 }

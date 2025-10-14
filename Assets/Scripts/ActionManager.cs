@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -25,23 +24,38 @@ public class ActionManager : Singleton<ActionManager>
     // called twice, when pressed and unpressed
     public void OnJumpAction(InputAction.CallbackContext context)
     {
-        if (context.started) { jump.Invoke(true); }
-        else if (context.canceled) { jump.Invoke(false); }
-
+        if (context.started)
+        {
+            jump.Invoke(true);
+        }
+        else if (context.canceled)
+        {
+            jump.Invoke(false);
+        }
     }
 
     public void OnAttackAction(InputAction.CallbackContext context)
     {
-        if (context.started) { attack.Invoke(true); }
-        else if (context.canceled) { attack.Invoke(false); }
-
+        if (context.started)
+        {
+            attack.Invoke(true);
+        }
+        else if (context.canceled)
+        {
+            attack.Invoke(false);
+        }
     }
 
     public void OnDash(InputAction.CallbackContext context)
     {
-        if (context.started) { dash.Invoke(true); }
-        else if (context.canceled) { dash.Invoke(false); }
-
+        if (context.started)
+        {
+            dash.Invoke(true);
+        }
+        else if (context.canceled)
+        {
+            dash.Invoke(false);
+        }
     }
 
     // called twice, when pressed and unpressed
@@ -65,6 +79,5 @@ public class ActionManager : Singleton<ActionManager>
             // Debug.Log("move stopped");
             move.Invoke(0);
         }
-
     }
 }

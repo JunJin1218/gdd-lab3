@@ -42,6 +42,9 @@ public class PlayerMovement : Singleton<PlayerMovement>
 
     private AudioSource ad;
 
+    [SerializeField]
+    private AudioClip dashClip;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -107,6 +110,7 @@ public class PlayerMovement : Singleton<PlayerMovement>
         if (dashPressed && dashAvailable)
         {
             rb.AddForce(dir * Vector2.right * dashForce, ForceMode2D.Impulse);
+            ad.PlayOneShot(dashClip);
             dashPressed = false;
         }
     }
