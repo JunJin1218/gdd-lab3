@@ -1,14 +1,18 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class CameraFollow : Singleton<CameraFollow>
+public class CameraFollow : MonoBehaviour
 {
-    [Header("Target to follow")]
-    public Transform target;
+    private Transform target;
 
     [Header("Follow settings")]
     public float smoothSpeed = 5f;
     public Vector3 offset;
 
+    void Start()
+    {
+        target = PlayerMovement.instance.gameObject.transform;
+    }
     private void LateUpdate()
     {
         if (target == null)
