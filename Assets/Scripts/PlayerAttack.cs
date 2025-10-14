@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEditor.Callbacks;
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour
+public class PlayerAttack : Singleton<PlayerAttack>
 {
     public LayerMask enemyMask;
     public float reboundForce = 4f;

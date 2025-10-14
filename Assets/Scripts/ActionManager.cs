@@ -4,7 +4,7 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
-public class ActionManager : MonoBehaviour
+public class ActionManager : Singleton<ActionManager>
 {
     public UnityEvent<bool> jump;
     public UnityEvent<bool> attack;
