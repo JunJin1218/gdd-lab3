@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1028809854120877066}
   - component: {fileID: 8548040569324180697}
   - component: {fileID: 777783196920449901}
+  - component: {fileID: -187215848372022920}
   m_Layer: 6
   m_Name: Slime
   m_TagString: Untagged
@@ -198,13 +199,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d87d31594704aa4c94e9355ed88e789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &3184223545038504171
+--- !u!82 &-187215848372022920
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5342874244483946203}
+  m_GameObject: {fileID: 1079519066721835186}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 7101219002317286651, guid: 2eacc5b9fd404a348a741af5e2544b8c, type: 2}
