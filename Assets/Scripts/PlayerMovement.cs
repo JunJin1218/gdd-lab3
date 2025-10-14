@@ -109,8 +109,6 @@ public class PlayerMovement : Singleton<PlayerMovement>
             rb.AddForce(dir * Vector2.right * dashForce, ForceMode2D.Impulse);
             dashPressed = false;
         }
-
-        Debug.Log($"{dashPressed}, {dashAvailable}");
     }
 
     void OnJump(InputAction.CallbackContext context)
@@ -151,7 +149,6 @@ public class PlayerMovement : Singleton<PlayerMovement>
     {
         dir = value;
         moving = dir != 0;
-        // Debug.Log($"{moving}, ${dir}");
     }
 
     public void Jump(bool b)
@@ -162,6 +159,11 @@ public class PlayerMovement : Singleton<PlayerMovement>
     public void Attack(bool b)
     {
         fallingAttack = b;
+    }
+
+    public void Dash(bool b)
+    {
+        dashPressed = b;
     }
 
     public void JumpHold(bool b)

@@ -2625,7 +2625,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 622301078}
-  - {fileID: 1955885210}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1560512866
@@ -3025,7 +3024,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   groundCheckDistance: 0.8
-  dashForce: 4
+  dashForce: 20
 --- !u!61 &1814315926
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3284,11 +3283,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &1955885210 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9200961289339820800, guid: dd455912a5c620c4e801e7d32b126dbf, type: 3}
-  m_PrefabInstance: {fileID: 118767559}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3389285298234029281
 PrefabInstance:
   m_ObjectHideFlags: 0
