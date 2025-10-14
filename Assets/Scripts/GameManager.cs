@@ -17,8 +17,8 @@ public class GameManager : Singleton<GameManager>
 
     public void OnRestartButtonPressed()
     {
-        ResetScore();
-        OnPlayerDied();
+        // unliek score and enemies, we need this resetPlayerPosition because player is 
+        // not destroyed on scene reload
         resetPlayerPosition();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
@@ -43,11 +43,6 @@ public class GameManager : Singleton<GameManager>
         UpdateScoreUI();
     }
 
-    public void ResetScore()
-    {
-        score = 0;
-        UpdateScoreUI();
-    }
 
     public void UpdateScoreUI()
     {
