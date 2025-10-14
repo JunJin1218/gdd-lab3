@@ -258,7 +258,7 @@ public class GameManager : Singleton<GameManager>
         PausePanel.SetActive(false);
         foreach (var audio in FindObjectsOfType<AudioSource>())
         {
-            audio.Play(); // or audio.UnPause();
+            audio.UnPause(); // or audio.UnPause();
         }
     }
 }
