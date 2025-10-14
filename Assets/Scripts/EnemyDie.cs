@@ -20,6 +20,8 @@ public class EnemyDie : MonoBehaviour
     public void Die()
     {
         col.enabled = false;
+        // Add score when enemies die
+        GameManager.instance.AddOnePoint();
         anim.SetTrigger("Death");
         ad.Play();
     }

@@ -292,63 +292,6 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!1001 &118767559
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1451207289}
-    m_Modifications:
-    - target: {fileID: 1938885033409038860, guid: dd455912a5c620c4e801e7d32b126dbf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1938885033409038860, guid: dd455912a5c620c4e801e7d32b126dbf, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1938885033409038860, guid: dd455912a5c620c4e801e7d32b126dbf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1938885033409038860, guid: dd455912a5c620c4e801e7d32b126dbf, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1938885033409038860, guid: dd455912a5c620c4e801e7d32b126dbf, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1938885033409038860, guid: dd455912a5c620c4e801e7d32b126dbf, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1938885033409038860, guid: dd455912a5c620c4e801e7d32b126dbf, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1938885033409038860, guid: dd455912a5c620c4e801e7d32b126dbf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1938885033409038860, guid: dd455912a5c620c4e801e7d32b126dbf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1938885033409038860, guid: dd455912a5c620c4e801e7d32b126dbf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5342874244483946203, guid: dd455912a5c620c4e801e7d32b126dbf, type: 3}
-      propertyPath: m_Name
-      value: Slime
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: dd455912a5c620c4e801e7d32b126dbf, type: 3}
 --- !u!1 &287656458
 GameObject:
   m_ObjectHideFlags: 0
@@ -2061,7 +2004,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 622301078}
-  - {fileID: 1955885210}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1814315918
@@ -2340,7 +2282,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   groundCheckDistance: 0.8
-  dashForce: 4
+  dashForce: 20
 --- !u!61 &1814315926
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2599,11 +2541,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &1955885210 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9200961289339820800, guid: dd455912a5c620c4e801e7d32b126dbf, type: 3}
-  m_PrefabInstance: {fileID: 118767559}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3389285298234029281
 PrefabInstance:
   m_ObjectHideFlags: 0
