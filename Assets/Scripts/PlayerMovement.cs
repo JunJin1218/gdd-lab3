@@ -1,3 +1,4 @@
+using System;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using Unity.VisualScripting.ReorderableList;
@@ -16,6 +17,8 @@ public class PlayerMovement : Singleton<PlayerMovement>
     public float attackForce = 10f;
     public LayerMask groundLayer;
     public float groundCheckDistance = 0.1f;
+    public float dashForce = 4f;
+    [NonSerialized] public bool dashAvailable = false;
 
     // PRIVATE
     private Rigidbody2D rb;
@@ -31,6 +34,7 @@ public class PlayerMovement : Singleton<PlayerMovement>
     private bool moving = false;
     private bool fallingAttack = false;
     private bool fallingAttackAvailable = false;
+    private bool dashPressed = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -86,7 +90,12 @@ public class PlayerMovement : Singleton<PlayerMovement>
             fallingAttackAvailable = false;
         }
 
-        // Debug.Log($"isgrounded {isGrounded} & jumpPressed {jumpPressed}");
+        // Dash
+        if (dashPressed && dashAvailable)
+        {
+            rb.AddForce(dir * Vector2.right * dashForce, ForceMode2D.Impulse);
+            dashPressed = false;
+        }
     }
     void OnJump(InputAction.CallbackContext context)
     {
@@ -137,5 +146,11 @@ public class PlayerMovement : Singleton<PlayerMovement>
     {
         if (b && extraJumpAvailable) extraJump = true;
     }
+
+    public void Dash(bool b)
+    {
+        dashPressed = b;
+    }
+
 
 }
