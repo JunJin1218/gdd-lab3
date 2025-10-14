@@ -8,6 +8,7 @@ public class GameManager : Singleton<GameManager>
     public int score { get; private set; }
     public bool IsPlaying { get; private set; }
     public TMPro.TMP_Text scoreText;
+    private bool loadingCancelled = false;
 
     void Start()
     {
@@ -60,6 +61,7 @@ public class GameManager : Singleton<GameManager>
 
     public void StartGame()
     {
+        SceneManager.LoadScene("LoadingScene");
         ResetScore();
         IsPlaying = true;
     }
@@ -118,6 +120,11 @@ public class GameManager : Singleton<GameManager>
     {
         // we need this ebcause idk why the game manager is not finding the
         // score text in the new scene on restart
+
+        if (scene.name == "LoadingScene")
+        {
+            StartCoroutine(LoadNextSceneAsync("Scene1"));
+        }
         var go = GameObject.Find("ScoreText");
         if (go != null)
         {
@@ -131,5 +138,65 @@ public class GameManager : Singleton<GameManager>
             btn.onClick.RemoveAllListeners();
             btn.onClick.AddListener(OnRestartButtonPressed);
         }
+
+        var mainMenuButtonGO = GameObject.Find("MainMenuButton");
+        if (mainMenuButtonGO != null)
+        {
+            var btn = mainMenuButtonGO.GetComponent<UnityEngine.UI.Button>();
+            btn.onClick.RemoveAllListeners();
+            btn.onClick.AddListener(BackToMainMenu);
+        }
+
+        var startButtonGO = GameObject.Find("StartButton");
+        if (startButtonGO != null)
+        {
+            var btn = startButtonGO.GetComponent<UnityEngine.UI.Button>();
+            btn.onClick.RemoveAllListeners();
+            btn.onClick.AddListener(StartGame);
+        }
     }
+
+    // main menu button
+    public void BackToMainMenu()
+    {
+        // Destroy the player if it exists
+        var player = GameObject.FindWithTag("Player");
+        if (player != null)
+        {
+            Destroy(player);
+        }
+        loadingCancelled = true;
+
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void LoadGameWithLoadingScreen()
+    {
+        SceneManager.LoadScene("LoadingScene");
+    }
+
+    // load the next scene asynchronously
+    IEnumerator LoadNextSceneAsync(string nextScene)
+    {
+        loadingCancelled = false;
+        yield return new WaitForSeconds(2f);
+
+        // Check if loading was cancelled
+        if (loadingCancelled)
+            yield break; // Stop if cancelled
+
+        // if not start loading the next scene
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextScene);
+
+        // while loading the next scene, check if loading was cancelled
+        while (!asyncLoad.isDone)
+        {
+            if (loadingCancelled)
+                yield break; // Stop if cancelled during loading
+            yield return null;
+        }
+    }
+
+    // this was done because there was a bug where when i click the main menu in the
+    // loading screen, the game would still load the scene1 after 2f seconds
 }
