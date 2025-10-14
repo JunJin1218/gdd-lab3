@@ -18,7 +18,9 @@ public class PlayerMovement : Singleton<PlayerMovement>
     public LayerMask groundLayer;
     public float groundCheckDistance = 0.1f;
     public float dashForce = 4f;
-    [NonSerialized] public bool dashAvailable = false;
+
+    [NonSerialized]
+    public bool dashAvailable = false;
 
     // PRIVATE
     private Rigidbody2D rb;
@@ -165,5 +167,4 @@ public class PlayerMovement : Singleton<PlayerMovement>
         if (b && extraJumpAvailable)
             extraJump = true;
     }
-
 }
