@@ -9,7 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3fd0ca116c6bda4690cec79763224b7, type: 3}
-  m_Name: GameManageValues
+  m_Script: {fileID: 11500000, guid: 7ac2c81cd4d0b7e4a8d73055419df494, type: 3}
+  m_Name: GameVariables
   m_EditorClassIdentifier: 
-  highScore: 9
+  PlayerAccelX: 20
+  PlayerDecelX: 40
+  PlayerMaxSpeedX: 20
+  PlayerJumpForce: 8
+  PlayerAttackForce: 20
+  PlayerGroundCheckDistance: 0.8
+  PlayerDashForce: 15

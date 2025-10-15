@@ -11,14 +11,15 @@ public class PlayerMovement : Singleton<PlayerMovement>
 {
     // PUBLIC
     // public PlayerActions playerActions;
-    public float accelX = 20f;
-    public float decelX = 40f;
-    public float maxSpeedX = 20f;
-    public float jumpForce = 8f;
-    public float attackForce = 10f;
     public LayerMask groundLayer;
-    public float groundCheckDistance = 0.1f;
-    public float dashForce = 4f;
+    public GameVariables gameVariables;
+    [NonSerialized] public float accelX = 20f;
+    [NonSerialized] public float decelX = 40f;
+    [NonSerialized] public float maxSpeedX = 20f;
+    [NonSerialized] public float jumpForce = 8f;
+    [NonSerialized] public float attackForce = 10f;
+    [NonSerialized] public float groundCheckDistance = 0.1f;
+    [NonSerialized] public float dashForce = 4f;
 
     [NonSerialized]
     public bool dashAvailable = false;
@@ -55,6 +56,14 @@ public class PlayerMovement : Singleton<PlayerMovement>
         sr = gameObject.GetComponent<SpriteRenderer>();
         animator = gameObject.GetComponent<Animator>();
         ad = gameObject.GetComponent<AudioSource>();
+
+        accelX = gameVariables.PlayerAccelX;
+        decelX = gameVariables.PlayerDecelX;
+        maxSpeedX = gameVariables.PlayerMaxSpeedX;
+        jumpForce = gameVariables.PlayerJumpForce;
+        attackForce = gameVariables.PlayerAttackForce;
+        groundCheckDistance = gameVariables.PlayerGroundCheckDistance;
+        dashForce = gameVariables.PlayerDashForce;
     }
 
     // Update is called once per frame
@@ -76,6 +85,8 @@ public class PlayerMovement : Singleton<PlayerMovement>
 
     void PlayerDie()
     {
+        GameManager.instance.ResetPlayerStates();
+        GameManager.instance.ResetScore();
         SceneManager.LoadScene("GameOver");
     }
     void FixedUpdate()
