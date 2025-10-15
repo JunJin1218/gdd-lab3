@@ -2260,6 +2260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8fbc3c6fd3f284ba06a286964e731a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameValues: {fileID: 11400000, guid: a476518fa1f1ae14c953e6c42413a1d9, type: 2}
   scoreText: {fileID: 758778162}
   PausePanel: {fileID: 532023661}
 --- !u!4 &1094720210

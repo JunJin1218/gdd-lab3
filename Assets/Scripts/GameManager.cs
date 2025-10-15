@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.AccessControl;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,7 @@ public class GameManager : Singleton<GameManager>
     public bool IsPlaying { get; private set; }
     public bool IsPlayerDead { get; private set; }
     public TMPro.TMP_Text scoreText;
+    public TMPro.TMP_Text highScoreText;
     private bool loadingCancelled = false;
     public GameObject PausePanel;
 
@@ -19,6 +21,7 @@ public class GameManager : Singleton<GameManager>
     {
         StartCoroutine(GameLoop());
         UpdateScoreUI();
+        UpdateHighScoreUI();
     }
 
     public void AddOnePoint()
@@ -31,6 +34,12 @@ public class GameManager : Singleton<GameManager>
     {
         if (scoreText != null)
             scoreText.text = "Score: " + score;
+    }
+
+    public void UpdateHighScoreUI()
+    {
+        if (highScoreText != null)
+            highScoreText.text = "High Score: " + gameValues.highScore;
     }
 
     public void OnPlayerDied()
@@ -92,6 +101,7 @@ public class GameManager : Singleton<GameManager>
 
     public void ResetScore()
     {
+        UpdateHighScore();
         score = 0;
         UpdateScoreUI();
     }
@@ -218,12 +228,6 @@ public class GameManager : Singleton<GameManager>
     // main menu button
     public void BackToMainMenu()
     {
-        // Destroy the player if it exists
-        var player = GameObject.FindWithTag("Player");
-        if (player != null)
-        {
-            Destroy(player);
-        }
         loadingCancelled = true;
 
         // Stop all audio except bgm
@@ -235,7 +239,9 @@ public class GameManager : Singleton<GameManager>
             }
         }
 
+        ResetScore();
         SceneManager.LoadScene("MainMenu");
+        UpdateHighScoreUI();
     }
 
     public void LoadGameWithLoadingScreen()
@@ -295,6 +301,7 @@ public class GameManager : Singleton<GameManager>
     public void UpdateHighScore()
     {
         gameValues.highScore = math.max(score, gameValues.highScore);
+        Debug.Log(gameValues.highScore);
     }
 
 }

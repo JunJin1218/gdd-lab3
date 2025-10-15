@@ -13,9 +13,14 @@ public class PlayerSceneTransfer : Singleton<PlayerSceneTransfer>
 
     public void SetStartingPosition(Scene current, Scene next)
     {
-        if (next.name == "Scene2")
+        if (next.name == "Scene2" || next.name == "Scene1")
         {
             transform.position = new Vector3(0f, 0f, 0f);
+        }
+
+        if (next.name == "MainMenu" || next.name == "GameOver" || next.name == "LoadingScene")
+        {
+            transform.position = new Vector3(200, 835, 0);
         }
     }
 }

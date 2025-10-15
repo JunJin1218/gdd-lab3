@@ -69,16 +69,15 @@ public class PlayerMovement : Singleton<PlayerMovement>
         // ResetPosition
         if (transform.position.y < -6)
         {
-            ResetPosition();
-            var player = GameObject.FindWithTag("Player");
-            if (player != null)
-            {
-                Destroy(player);
-            }
-            SceneManager.LoadScene("GameOver");
+            // ResetPosition(); // Actually do we need this?
+            PlayerDie();
         }
     }
 
+    void PlayerDie()
+    {
+        SceneManager.LoadScene("GameOver");
+    }
     void FixedUpdate()
     {
         // Movement (x axis)
