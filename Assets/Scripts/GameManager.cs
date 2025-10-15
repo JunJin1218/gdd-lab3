@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.AccessControl;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
+    public GameManageValues gameValues;
     public int score { get; private set; }
     public bool IsPlaying { get; private set; }
     public bool IsPlayerDead { get; private set; }
@@ -295,4 +297,11 @@ public class GameManager : Singleton<GameManager>
             audio.Play(); // or audio.UnPause();
         }
     }
+
+    // High Score logic
+    public void UpdateHighScore()
+    {
+        gameValues.highScore = math.max(score, gameValues.highScore);
+    }
+
 }
