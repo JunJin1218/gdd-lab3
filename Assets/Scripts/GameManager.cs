@@ -38,6 +38,7 @@ public class GameManager : Singleton<GameManager>
 
     public void UpdateHighScoreUI()
     {
+        UpdateHighScore();
         if (highScoreText != null)
             highScoreText.text = "High Score: " + gameValues.highScore;
     }
@@ -169,6 +170,15 @@ public class GameManager : Singleton<GameManager>
         // we need this ebcause idk why the game manager is not finding the
         // score text in the new scene on restart
 
+        if (scene.name == "MainMenu")
+        {
+            var hsGo = GameObject.Find("HighScoreText");
+            if (hsGo != null)
+            {
+                highScoreText = hsGo.GetComponent<TMPro.TMP_Text>();
+                UpdateHighScoreUI();
+            }
+        }
         if (scene.name == "LoadingScene")
         {
             StartCoroutine(LoadNextSceneAsync("Scene1"));
@@ -310,5 +320,4 @@ public class GameManager : Singleton<GameManager>
         gameValues.highScore = math.max(score, gameValues.highScore);
         Debug.Log(gameValues.highScore);
     }
-
 }
