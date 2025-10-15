@@ -117,7 +117,9 @@ public class GameManager : Singleton<GameManager>
         ResetPlayerStates();
         resetPlayerPosition();
         // load the current active scene again --> "RESTARTED"!
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        // load Scene1
+        SceneManager.LoadScene("Scene1");
         IsPlayerDead = false;
     }
 
