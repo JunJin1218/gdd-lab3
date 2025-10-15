@@ -7,9 +7,9 @@ public class EnableDash : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            PlayerSounds.instance.PlayDashAudio();
             PlayerMovement.instance.dashAvailable = true;
             gameObject.SetActive(false);
-            // Jae's TODO: pls add some sound here
         }
     }
 }

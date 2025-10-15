@@ -62,6 +62,25 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!243 &-1041887041335199687
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Boxes
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 0b8e7fcbd574e7e41bb6cbcda56fdd8a
+  m_Children: []
+  m_Volume: 40d05c82417ea9444b575ee586bf90c1
+  m_Pitch: 358d212ac72646749922675f9a3808ce
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 5885771663224085699}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -85,6 +104,7 @@ AudioMixerController:
     - 0de8a2edd1c7288469db9e9ee8018d07
     - e20c4aed9b9743c44a07678f7fc4757c
     - 04151675e88de024bafacf438762c9f6
+    - 0b8e7fcbd574e7e41bb6cbcda56fdd8a
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -101,6 +121,7 @@ AudioMixerGroupController:
   - {fileID: 6584508767441950209}
   - {fileID: -5015298663651161982}
   - {fileID: 7101219002317286651}
+  - {fileID: -1041887041335199687}
   m_Volume: 2daf5f59224db2947851dfca7fc6c1db
   m_Pitch: c1d09e3bdba636045ad6f5dac2115386
   m_Send: 00000000000000000000000000000000
@@ -134,6 +155,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 61d751eb518f9254d9ef72b0e1664c19
   m_FloatValues:
+    40d05c82417ea9444b575ee586bf90c1: 5.8946934
     7f35080c948eb2544a253a292e73b329: -15
   m_TransitionOverrides: {}
 --- !u!243 &1985862264406296747
@@ -155,6 +177,20 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &5885771663224085699
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 6ee8e96448418b44790f89bcfe7ec02e
+  m_EffectName: Attenuation
+  m_MixLevel: cb297f7e127601646b8b20ff9292e9b9
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &6143399427411254339
 AudioMixerEffectController:
   m_ObjectHideFlags: 3

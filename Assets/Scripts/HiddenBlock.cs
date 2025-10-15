@@ -4,6 +4,7 @@ public class HiddenBlock : MonoBehaviour
 {
     [Header("Player filter (둘 중 편한 걸 쓰면 됨)")]
     public string playerTag = "Player";
+    public AudioSource audioSource;
     public LayerMask playerMask;
 
     [Header("Anim")]
@@ -56,5 +57,10 @@ public class HiddenBlock : MonoBehaviour
             if (!child.activeSelf)
                 child.SetActive(true);
         }
+    }
+
+    public void playSound()
+    {
+        audioSource.Play();
     }
 }

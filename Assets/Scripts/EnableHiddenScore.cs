@@ -8,6 +8,7 @@ public class EnableHiddenScore : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            PlayerSounds.instance.PlayScoreAudio();
             PlayerHiddenScore.instance.StartHiddenScore();
             gameObject.SetActive(false);
             // Jae's TODO: pls add some sound here
