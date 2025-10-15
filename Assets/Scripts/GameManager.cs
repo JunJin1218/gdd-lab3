@@ -7,6 +7,7 @@ public class GameManager : Singleton<GameManager>
 {
     public int score { get; private set; }
     public bool IsPlaying { get; private set; }
+    public bool IsPlayerDead { get; private set; }
     public TMPro.TMP_Text scoreText;
     private bool loadingCancelled = false;
 
@@ -90,6 +91,13 @@ public class GameManager : Singleton<GameManager>
         UpdateScoreUI();
     }
 
+    public void ResetPlayerStates()
+    {
+        // Disable Dash
+        PlayerMovement.instance.dashAvailable = false;
+        PlayerHiddenScore.instance.StopHiddenScore();
+    }
+
     public void ForceStopGame()
     {
         IsPlaying = false;
@@ -101,10 +109,13 @@ public class GameManager : Singleton<GameManager>
     {
         // unliek score and enemies, we need this resetPlayerPosition because player is
         // not destroyed on scene reload
+        IsPlayerDead = true;
         ResetScore();
+        ResetPlayerStates();
         resetPlayerPosition();
         // load the current active scene again --> "RESTARTED"!
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        IsPlayerDead = false;
     }
 
     public void resetPlayerPosition()
