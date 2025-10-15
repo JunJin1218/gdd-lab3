@@ -299,7 +299,7 @@ public class GameManager : Singleton<GameManager>
         PausePanel.SetActive(true);
         foreach (var audio in FindObjectsOfType<AudioSource>())
         {
-            audio.Stop(); // or audio.Pause();
+            audio.Pause(); // or audio.Pause();
         }
     }
 
@@ -310,7 +310,7 @@ public class GameManager : Singleton<GameManager>
         PausePanel.SetActive(false);
         foreach (var audio in FindObjectsOfType<AudioSource>())
         {
-            audio.Play(); // or audio.UnPause();
+            audio.UnPause(); // or audio.UnPause();
         }
     }
 
