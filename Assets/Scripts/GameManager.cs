@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.AccessControl;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,7 +10,6 @@ public class GameManager : Singleton<GameManager>
     public bool IsPlaying { get; private set; }
     public TMPro.TMP_Text scoreText;
     private bool loadingCancelled = false;
-
     public GameObject PausePanel;
 
     void Start()
@@ -104,8 +104,10 @@ public class GameManager : Singleton<GameManager>
     {
         // unliek score and enemies, we need this resetPlayerPosition because player is
         // not destroyed on scene reload
+        Debug.Log("[GameManager] Restart button pressed.");
         ResetScore();
         resetPlayerPosition();
+
         // load the current active scene again --> "RESTARTED"!
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
@@ -189,6 +191,12 @@ public class GameManager : Singleton<GameManager>
             var btn = resumeButtonGO.GetComponent<UnityEngine.UI.Button>();
             btn.onClick.RemoveAllListeners();
             btn.onClick.AddListener(ResumeGame);
+        }
+        var restartButton = GameObject.Find("RestartButton")?.GetComponent<UnityEngine.UI.Button>();
+        if (restartButton != null)
+        {
+            restartButton.onClick.RemoveAllListeners();
+            restartButton.onClick.AddListener(OnRestartButtonPressed);
         }
     }
 

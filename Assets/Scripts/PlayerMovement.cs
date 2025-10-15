@@ -67,7 +67,9 @@ public class PlayerMovement : Singleton<PlayerMovement>
 
         // ResetPosition
         if (transform.position.y < -6)
+        {
             ResetPosition();
+        }
     }
 
     void FixedUpdate()
