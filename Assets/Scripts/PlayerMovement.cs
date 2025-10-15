@@ -5,6 +5,7 @@ using Unity.VisualScripting.ReorderableList;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : Singleton<PlayerMovement>
 {
@@ -69,6 +70,12 @@ public class PlayerMovement : Singleton<PlayerMovement>
         if (transform.position.y < -6)
         {
             ResetPosition();
+            var player = GameObject.FindWithTag("Player");
+            if (player != null)
+            {
+                Destroy(player);
+            }
+            SceneManager.LoadScene("GameOver");
         }
     }
 

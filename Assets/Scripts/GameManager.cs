@@ -116,6 +116,7 @@ public class GameManager : Singleton<GameManager>
         ResetScore();
         ResetPlayerStates();
         resetPlayerPosition();
+        Debug.Log("Restart button pressed");
 
         // load the current active scene again --> "RESTARTED"!
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

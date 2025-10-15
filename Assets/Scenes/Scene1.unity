@@ -501,29 +501,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 354207542}
+  - component: {fileID: 369075433}
   m_Layer: 0
-  m_Name: BlockWrapper
+  m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &354207542
+--- !u!4 &369075433
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354207541}
+  m_GameObject: {fileID: 369075432}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1390054459}
-  m_Father: {fileID: 287656459}
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &383566512
 GameObject:
@@ -3554,13 +3553,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1094720209}
-    - target: {fileID: 8523248016748864224, guid: ca210c7d17fe00944846fad50cbd6b68, type: 3}
-      propertyPath: m_Name
-      value: InGameUI
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4138712258974620386, guid: ca210c7d17fe00944846fad50cbd6b68, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 383566515}
     - targetCorrespondingSourceObject: {fileID: 4138712258974620386, guid: ca210c7d17fe00944846fad50cbd6b68, type: 3}
       insertIndex: -1
       addedObject: {fileID: 532023662}
@@ -3644,4 +3642,3 @@ SceneRoots:
   - {fileID: 54904335}
   - {fileID: 1094720210}
   - {fileID: 3180174221478111352}
-  - {fileID: 1815724424}
