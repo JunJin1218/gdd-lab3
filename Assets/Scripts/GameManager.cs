@@ -81,7 +81,10 @@ public class GameManager : Singleton<GameManager>
         IsPlaying = true;
         foreach (var audio in FindObjectsOfType<AudioSource>())
         {
-            audio.Play(); // or audio.UnPause();
+            if (audio.clip.name != "bgm")
+            {
+                audio.Stop();
+            }
         }
     }
 
@@ -211,10 +214,13 @@ public class GameManager : Singleton<GameManager>
         }
         loadingCancelled = true;
 
-        // Stop all audio
+        // Stop all audio except bgm
         foreach (var audio in FindObjectsOfType<AudioSource>())
         {
-            audio.Stop();
+            if (audio.clip.name != "bgm")
+            {
+                audio.Stop();
+            }
         }
 
         SceneManager.LoadScene("MainMenu");
