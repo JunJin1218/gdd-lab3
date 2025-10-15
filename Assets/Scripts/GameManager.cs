@@ -190,7 +190,7 @@ public class GameManager : Singleton<GameManager>
             btn.onClick.RemoveAllListeners();
             btn.onClick.AddListener(StartGame);
         }
-        var pauseButtonGO = GameObject.Find("PauseButton");
+        var pauseButtonGO = GameObject.Find("Pause");
         if (pauseButtonGO != null)
         {
             var btn = pauseButtonGO.GetComponent<UnityEngine.UI.Button>();
@@ -198,7 +198,7 @@ public class GameManager : Singleton<GameManager>
             btn.onClick.AddListener(PauseGame);
         }
 
-        var resumeButtonGO = GameObject.Find("ResumeButton");
+        var resumeButtonGO = GameObject.Find("Resume");
         if (resumeButtonGO != null)
         {
             var btn = resumeButtonGO.GetComponent<UnityEngine.UI.Button>();
@@ -210,6 +210,13 @@ public class GameManager : Singleton<GameManager>
         {
             restartButton.onClick.RemoveAllListeners();
             restartButton.onClick.AddListener(OnRestartButtonPressed);
+        }
+
+        var pausePanelGO = GameObject.Find("PausePanel");
+        if (pausePanelGO != null)
+        {
+            PausePanel = pausePanelGO;
+            PausePanel.SetActive(false); // make sure it's hidden at start
         }
     }
 
@@ -285,7 +292,7 @@ public class GameManager : Singleton<GameManager>
         PausePanel.SetActive(false);
         foreach (var audio in FindObjectsOfType<AudioSource>())
         {
-            audio.UnPause(); // or audio.UnPause();
+            audio.Play(); // or audio.UnPause();
         }
     }
 }
